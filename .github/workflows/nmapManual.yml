@@ -1,0 +1,14 @@
+name: Hola Mundo
+
+on:
+    push:
+      branches:
+        - master
+jobs:
+    hola:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Instalar Nmap
+          run: sudo apt-get install nmap
+        - name: Usar Nmap
+          run: nmap -sV mercadona.es
