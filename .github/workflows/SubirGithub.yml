@@ -25,7 +25,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
       run: |
         git config user.name "GitHub Actions Bot"
-        git config user.email "actions@github.com"
+        git config user.email "acciones@github.com"
         git add nmap_report.txt
         git commit -m "Añadido archivo generado automáticamente"
         git push
