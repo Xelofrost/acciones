@@ -2,7 +2,7 @@ name: Hola Mundo
 
 on:
   schedule:
-    - cron: "*/1 * * * *" # Cada minuto
+    - cron: "*/10 * * * *" # Cada minuto
 
 jobs:
   hola:
