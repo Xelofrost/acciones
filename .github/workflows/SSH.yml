@@ -8,7 +8,7 @@ jobs:
     hola:
       runs-on: ubuntu-latest
       steps:
-        - name: Instalamos ssh
-          run: sudo apt-get install ssh
-        - name: Comprobamos que existe ssh 
-          run: ssh -v
+        - name: Instalar sshpass
+          run: sudo apt-get update && sudo apt-get install sshpass
+        - name: Conectamos con sshpass
+          run: sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.IP }} "echo 'Conexión exitosa'"
