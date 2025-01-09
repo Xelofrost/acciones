@@ -1,4 +1,4 @@
-name: SSHNmap
+name: SSH
 
 on:
   push:
@@ -17,4 +17,4 @@ jobs:
         run: nmap -sV mercadona.es -oN nmap_report-Horacio.txt
       - name: Conectar y enviar archivo a servidor SSH
         run: |
-          sshpass -p ${{ secrets.PASSWORD }} scp -o StrictHostKeyChecking=no nmap_report-Horacio.txt ${{ secrets.USER }}@${{ secrets.IP }}:/ruta/destino
+          sshpass -p ${{ secrets.PASSWORD }} scp -o StrictHostKeyChecking=no nmap_report-Horacio.txt ${{ secrets.USER }}@${{ secrets.IP }}:~/
