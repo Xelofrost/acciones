@@ -1,0 +1,59 @@
+# Nmap 7.80 scan initiated Thu Jan  9 18:25:22 2025 as: nmap -sV -oN nmap_report.txt mercadona.es
+Nmap scan report for mercadona.es (35.201.121.112)
+Host is up (0.0060s latency).
+rDNS record for 35.201.121.112: 112.121.201.35.bc.googleusercontent.com
+Not shown: 998 filtered ports
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      UploadServer
+443/tcp open  ssl/https UploadServer
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.80%I=7%D=1/9%Time=6780149D%P=x86_64-pc-linux-gnu%r(GetRe
+SF:quest,1B2,"HTTP/1\.0\x20403\x20Forbidden\r\nX-GUploader-UploadID:\x20AF
+SF:iumC5LkxPZ13tz_VupwY8eGlxeugoQ66RPMDqtLw83hHgyAffMH9dKoLcJRQUqQAFWwCDW\
+SF:r\nContent-Type:\x20application/xml;\x20charset=UTF-8\r\nContent-Length
+SF::\x20111\r\nDate:\x20Thu,\x2009\x20Jan\x202025\x2018:25:33\x20GMT\r\nEx
+SF:pires:\x20Thu,\x2009\x20Jan\x202025\x2018:25:33\x20GMT\r\nCache-Control
+SF::\x20private,\x20max-age=0\r\nServer:\x20UploadServer\r\n\r\n<\?xml\x20
+SF:version='1\.0'\x20encoding='UTF-8'\?><Error><Code>AccessDenied</Code><M
+SF:essage>Access\x20denied\.</Message></Error>")%r(HTTPOptions,13B,"HTTP/1
+SF:\.0\x20200\x20OK\r\nX-GUploader-UploadID:\x20AFiumC7g9l-muglrj94YrLfppC
+SF:o8n4aknEbldEYZJdxUy20iFMsLgZa-6nqOmvqerOfef8o_3bymNek\r\nDate:\x20Thu,\
+SF:x2009\x20Jan\x202025\x2018:25:33\x20GMT\r\nExpires:\x20Thu,\x2009\x20Ja
+SF:n\x202025\x2018:25:33\x20GMT\r\nCache-Control:\x20private,\x20max-age=0
+SF:\r\nContent-Length:\x200\r\nServer:\x20UploadServer\r\nContent-Type:\x2
+SF:0text/html;\x20charset=UTF-8\r\n\r\n")%r(RTSPRequest,1AD,"HTTP/1\.0\x20
+SF:400\x20Bad\x20Request\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r
+SF:\nReferrer-Policy:\x20no-referrer\r\nContent-Length:\x20273\r\nDate:\x2
+SF:0Thu,\x2009\x20Jan\x202025\x2018:25:33\x20GMT\r\n\r\n\n<html><head>\n<m
+SF:eta\x20http-equiv=\"content-type\"\x20content=\"text/html;charset=utf-8
+SF:\">\n<title>400\x20Bad\x20Request</title>\n</head>\n<body\x20text=#0000
+SF:00\x20bgcolor=#ffffff>\n<h1>Error:\x20Bad\x20Request</h1>\n<h2>Your\x20
+SF:client\x20has\x20issued\x20a\x20malformed\x20or\x20illegal\x20request\.
+SF:</h2>\n<h2></h2>\n</body></html>\n")%r(FourOhFourRequest,1B2,"HTTP/1\.0
+SF:\x20403\x20Forbidden\r\nX-GUploader-UploadID:\x20AFiumC5-aK7DbFXHBt0fTS
+SF:qa_MoxtDZ0Ckg0Pg0TVCkxnx04qCLoxK1NKlqHZDTkSo6Q5USK\r\nContent-Type:\x20
+SF:application/xml;\x20charset=UTF-8\r\nContent-Length:\x20111\r\nDate:\x2
+SF:0Thu,\x2009\x20Jan\x202025\x2018:25:38\x20GMT\r\nExpires:\x20Thu,\x2009
+SF:\x20Jan\x202025\x2018:25:38\x20GMT\r\nCache-Control:\x20private,\x20max
+SF:-age=0\r\nServer:\x20UploadServer\r\n\r\n<\?xml\x20version='1\.0'\x20en
+SF:coding='UTF-8'\?><Error><Code>AccessDenied</Code><Message>Access\x20den
+SF:ied\.</Message></Error>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.80%T=SSL%I=7%D=1/9%Time=678014A3%P=x86_64-pc-linux-gnu%
+SF:r(FourOhFourRequest,1F2,"HTTP/1\.0\x20403\x20Forbidden\r\nX-GUploader-U
+SF:ploadID:\x20AFiumC4FEKeIFz_cfSHU6bHNWMYeEOjuDa3ncVRKocbNn6OklenjjF9bsmS
+SF:iS7clZuUHCA50DUhK214\r\nContent-Type:\x20application/xml;\x20charset=UT
+SF:F-8\r\nContent-Length:\x20111\r\nDate:\x20Thu,\x2009\x20Jan\x202025\x20
+SF:18:25:39\x20GMT\r\nExpires:\x20Thu,\x2009\x20Jan\x202025\x2018:25:39\x2
+SF:0GMT\r\nCache-Control:\x20private,\x20max-age=0\r\nServer:\x20UploadSer
+SF:ver\r\nAlt-Svc:\x20h3=\":443\";\x20ma=2592000,h3-29=\":443\";\x20ma=259
+SF:2000\r\n\r\n<\?xml\x20version='1\.0'\x20encoding='UTF-8'\?><Error><Code
+SF:>AccessDenied</Code><Message>Access\x20denied\.</Message></Error>")%r(T
+SF:LSSessionReq,B3,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nContent-Length:\
+SF:x2054\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nDate:\x20Thu,\
+SF:x2009\x20Jan\x202025\x2018:25:50\x20GMT\r\n\r\n<html><title>Error\x2040
+SF:0\x20\(Bad\x20Request\)!!1</title></html>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan  9 18:26:33 2025 -- 1 IP address (1 host up) scanned in 70.95 seconds
