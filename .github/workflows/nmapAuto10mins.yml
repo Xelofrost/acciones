@@ -1,0 +1,14 @@
+name: Nmap_10mins
+
+on:
+  schedule:
+    - cron: "*/10 * * * *" # Cada minuto
+
+jobs:
+  hola:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Instalar Nmap
+        run: sudo apt-get update && sudo apt-get install -y nmap
+      - name: Usar Nmap
+        run: nmap -sV mercadona.es

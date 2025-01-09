@@ -1,14 +1,14 @@
-name: Nmap_10mins
+name: Hola Mundo
 
 on:
-  schedule:
-    - cron: "*/10 * * * *" # Cada minuto
-
+    push:
+      branches:
+        - master
 jobs:
-  hola:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Instalar Nmap
-        run: sudo apt-get update && sudo apt-get install -y nmap
-      - name: Usar Nmap
-        run: nmap -sV mercadona.es
+    hola:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Instalar Nmap
+          run: sudo apt-get install nmap
+        - name: Usar Nmap
+          run: nmap -sV mercadona.es
