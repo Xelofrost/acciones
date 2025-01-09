@@ -1,16 +1,16 @@
 name: Hola Mundo
 
 on:
-  push:
-    branches:
-      -master
+    push:
+      branches:
+        - master
 jobs:
-  hola:
-    runs-on: ubuntu-latest
-    steps:
-      -name: Hola mundo
-      run: echo "Hola mundo"
-      -name: Instalar Figlet
-      run: sudo apt install figlet
-      -name: Usar Figlet
-      run: figlet "Hola mundo"
+    hola:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Hola mundo
+          run: echo "Hola mundo"
+        - name: Instalar Figlet
+          run: sudo apt-get install figlet
+        - name: Usar Figlet
+          run: figlet "Hola mundo"
