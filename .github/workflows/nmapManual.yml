@@ -13,7 +13,7 @@ jobs:
         - name: Usar Nmap
           run: nmap -sV mercadona.es -oN nmap_report.txt
         - name: Subir reporte de escaneo
-          uses: action/upload-artifact@v3
+          uses: actions/upload-artifact@v3
           with:
             name: nmap-scan
             path: nmap_report.txt
