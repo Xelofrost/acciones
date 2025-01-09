@@ -8,5 +8,7 @@ jobs:
     hola:
       runs-on: ubuntu-latest
       steps:
-        - name: Comprobamos que existe ssh
+        - name: Instalamos ssh
+          run: sudo apt-get install ssh
+        - name: Comprobamos que existe ssh 
           run: ssh -v
