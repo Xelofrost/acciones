@@ -1,0 +1,12 @@
+name: SSH
+
+on:
+    push:
+      branches:
+        - master
+jobs:
+    hola:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Comprobamos que existe ssh
+          run: ssh -v
