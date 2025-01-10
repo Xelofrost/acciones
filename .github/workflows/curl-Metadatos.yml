@@ -1,0 +1,14 @@
+name: Curl
+
+on:
+    push:
+      branches:
+        - master
+jobs:
+    hola:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Actualizar
+          run: sudo apt-get update
+        - name: Usar Curl
+          run: curl 169.254.169.254
