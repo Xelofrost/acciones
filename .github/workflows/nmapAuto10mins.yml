@@ -2,6 +2,9 @@
 name: Nmap_10mins
 
 on:
+  push:
+    branches:
+      - master
 #  schedule:
 #    - cron: "10 * * * *" # Cada minuto
 
