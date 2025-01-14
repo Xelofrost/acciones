@@ -21,9 +21,9 @@ jobs:
 
       - name: Conectar a SSH y obtener el log
         run: |
-          sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.IP }} "
-            cat /home/cowrie/cowrie/var/log/cowrie/cowrie.log
-          " > log_remoto.txt
+            sshpass -p ${{ secrets.PASSWORD }} ssh -p 397 -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.IP }} "
+              cat /home/cowrie/cowrie/var/log/cowrie/cowrie.log
+            " > log_remoto.txt
 
       - name: Mover log y hacer commit
         env:
