@@ -1,0 +1,1 @@
+cat: /home/cowrie/cowrie/var/log/cowrie/cowrie.log: No such file or directory
