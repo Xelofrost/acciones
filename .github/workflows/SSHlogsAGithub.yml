@@ -1,0 +1,37 @@
+name: SSH Log Collection and Commit Report
+
+on:
+  workflow_dispatch: # Permite disparar manualmente la acción
+  schedule:
+    - cron: "0 0 * * *" # Opcional: programa el proceso de recolección de logs
+
+jobs:
+  ssh_log_collection_and_commit:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Instalar sshpass
+        run: sudo apt-get update && sudo apt-get install sshpass
+
+      - name: Conectar a SSH y obtener el log
+        run: |
+          sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.IP }} "
+            cat /home/cowrie/cowrie/var/log/cowrie/cowrie.log
+          " > log_remoto.txt
+
+      - name: Mover log y hacer commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          mv log_remoto.txt "reports/log_remoto_$(date +'%Y%m%d%H%M%S').txt"
+          git add reports/
+          git commit -m "Add SSH log file: $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
